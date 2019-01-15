@@ -1,0 +1,31 @@
+{% set name = "iriclib" %}
+{% set version = "3.0" %}
+
+package:
+  name: {{ name }}
+  version: {{ version }}
+
+source:
+  git_url: https://github.com/i-RIC/{{ name }}
+
+build:
+  number: 0
+
+requirements:
+  build:
+    - cmake=2.8
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
+    - {{ compiler('fortran') }}
+    - cgns
+  run:
+    - cgns
+
+about:
+  home: http://i-ric.org
+  license:
+  summary:
+    iRIC software is a free numerical simulation platform supporting a
+    wide variety of computational solvers for problems in water
+    science and engineering.
+  dev_url: https://github.com/i-RIC/iriclib
