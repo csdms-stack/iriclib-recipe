@@ -1,0 +1,13 @@
+diff --git a/unittests_cgnsfile/case_sol_readwrite.cpp b/unittests_cgnsfile/case_sol_readwrite.cpp
+index d605658..0888a1c 100644
+--- a/unittests_cgnsfile/case_sol_readwrite.cpp
++++ b/unittests_cgnsfile/case_sol_readwrite.cpp
+@@ -302,7 +302,7 @@ bool is_hdf(const std::string& cgnsName)
+ 	if (cgio_get_file_type(cgio_num, &filetype))
+ 		return false;
+ 	cgio_close_file(cgio_num);
+-	return (filetype == CGIO_FILE_HDF5 || filetype == CGIO_FILE_PHDF5);
++	return (filetype == CGIO_FILE_HDF5);
+ }
+ 
+ void case_SolWriteStd(const std::string& origCgnsName)

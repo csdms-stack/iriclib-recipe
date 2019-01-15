@@ -8,6 +8,8 @@ package:
 source:
   git_url: https://github.com/i-RIC/{{ name }}
   git_rev: a6a110f117e9a6b1584289621426917a2cfdf487
+  patches:
+    - filetype.patch
 
 build:
   number: 0
