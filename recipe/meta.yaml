@@ -10,9 +10,10 @@ source:
   git_rev: a6a110f117e9a6b1584289621426917a2cfdf487
   patches:
     - filetype.patch
+    - macos-build.patch
 
 build:
-  number: 0
+  number: 1
 
 requirements:
   build:
