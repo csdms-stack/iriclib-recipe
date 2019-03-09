@@ -1,0 +1,25 @@
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 6fac4a5..406eb82 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -2,6 +2,8 @@ cmake_minimum_required (VERSION 2.8)
+ 
+ project (iriclib CXX C)
+ 
++set(CMAKE_MACOSX_RPATH TRUE)
++
+ # set standard directory locations
+ include(GNUInstallDirs)
+ 
+@@ -100,6 +102,11 @@ if(WIN32)
+   
+   # link
+   target_link_libraries(iriclib ${EXTRA_LIBS})
++elseif(APPLE)
++  find_library(CGNS_LIBRARY libcgns.a)
++  find_library(HDF5_LIBRARY libhdf5.dylib)
++  set(EXTRA_LIBS ${EXTRA_LIBS} ${CGNS_LIBRARY} ${HDF5_LIBRARY})
++  target_link_libraries(iriclib ${EXTRA_LIBS})
+ endif()
+ 
+ if(CMAKE_VERSION VERSION_LESS "3.1")
