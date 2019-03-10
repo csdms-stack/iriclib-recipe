@@ -11,7 +11,7 @@ source:
   patches:
     - filetype.patch
     - unix-find-library.patch
-    - macos-rpath.patch
+    - macosx-rpath.patch
     - propagate-libraries.patch
 
 build:
