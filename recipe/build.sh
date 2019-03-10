@@ -1,6 +1,8 @@
 #! /usr/bin/env bash
 
-export MACOSX_DEPLOYMENT_TARGET=""
+if [[ `uname -s` == 'Darwin' ]]; then
+    export MACOSX_DEPLOYMENT_TARGET=""
+fi
 
 mkdir _build && cd _build
 cmake .. \
