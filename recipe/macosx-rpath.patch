@@ -1,0 +1,15 @@
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 6fac4a5..3be08a5 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -2,6 +2,10 @@ cmake_minimum_required (VERSION 2.8)
+ 
+ project (iriclib CXX C)
+ 
++if (APPLE)
++  set(CMAKE_MACOSX_RPATH TRUE)
++endif()
++
+ # set standard directory locations
+ include(GNUInstallDirs)
+ 

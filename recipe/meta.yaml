@@ -10,7 +10,9 @@ source:
   git_rev: a6a110f117e9a6b1584289621426917a2cfdf487
   patches:
     - filetype.patch
-    - macos-build-cgns-static.patch
+    - unix-find-library.patch
+    - macos-rpath.patch
+    - propagate-libraries.patch
 
 build:
   number: 2
