@@ -1,0 +1,16 @@
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 6fac4a5..d910a32 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -100,6 +100,11 @@ if(WIN32)
+   
+   # link
+   target_link_libraries(iriclib ${EXTRA_LIBS})
++elseif(UNIX)
++  find_library(CGNS_LIBRARY cgns)
++  find_library(HDF5_LIBRARY hdf5 PATHS ${CMAKE_INSTALL_PREFIX}/lib NO_DEFAULT_PATH)
++  set(EXTRA_LIBS ${EXTRA_LIBS} iriclib ${CGNS_LIBRARY} ${HDF5_LIBRARY})
++  target_link_libraries(iriclib ${EXTRA_LIBS})
+ endif()
+ 
+ if(CMAKE_VERSION VERSION_LESS "3.1")

@@ -1,0 +1,65 @@
+diff --git a/unittest_cg_open_modify/CMakeLists.txt b/unittest_cg_open_modify/CMakeLists.txt
+index d85e82a..d403a1c 100644
+--- a/unittest_cg_open_modify/CMakeLists.txt
++++ b/unittest_cg_open_modify/CMakeLists.txt
+@@ -15,11 +15,5 @@ if (WIN32)
+     )
+ endif()
+ 
+-# library dependencies
+-find_library(CGNS_LIBRARY cgns)
+-find_package(HDF5 NAMES hdf5)
+-
+-SET(EXTRA_LIBS ${EXTRA_LIBS} iriclib ${CGNS_LIBRARY} ${HDF5_LIBRARIES})
+-
+ # link
+ target_link_libraries(unittest_cg_open_modify ${EXTRA_LIBS})
+diff --git a/unittest_cg_open_read/CMakeLists.txt b/unittest_cg_open_read/CMakeLists.txt
+index f8476ce..3685454 100644
+--- a/unittest_cg_open_read/CMakeLists.txt
++++ b/unittest_cg_open_read/CMakeLists.txt
+@@ -15,11 +15,5 @@ if (WIN32)
+     )
+ endif()
+ 
+-# library dependencies
+-find_library(CGNS_LIBRARY cgns)
+-find_package(HDF5 NAMES hdf5)
+-
+-SET(EXTRA_LIBS ${EXTRA_LIBS} iriclib ${CGNS_LIBRARY} ${HDF5_LIBRARIES})
+-
+ # link
+ target_link_libraries(unittest_cg_open_read ${EXTRA_LIBS})
+diff --git a/unittest_lock/CMakeLists.txt b/unittest_lock/CMakeLists.txt
+index 083ec47..335bfc5 100644
+--- a/unittest_lock/CMakeLists.txt
++++ b/unittest_lock/CMakeLists.txt
+@@ -15,11 +15,5 @@ if (WIN32)
+     )
+ endif()
+ 
+-# library dependencies
+-find_library(CGNS_LIBRARY cgns)
+-find_package(HDF5 NAMES hdf5)
+-
+-SET(EXTRA_LIBS ${EXTRA_LIBS} iriclib ${CGNS_LIBRARY} ${HDF5_LIBRARIES})
+-
+ # link
+ target_link_libraries(unittest_lock ${EXTRA_LIBS})
+diff --git a/unittests_cgnsfile/CMakeLists.txt b/unittests_cgnsfile/CMakeLists.txt
+index 8c0cd52..4bbbef8 100644
+--- a/unittests_cgnsfile/CMakeLists.txt
++++ b/unittests_cgnsfile/CMakeLists.txt
+@@ -49,12 +49,6 @@ if (WIN32)
+     )
+ endif()
+ 
+-# library dependencies
+-find_library(CGNS_LIBRARY cgns)
+-find_package(HDF5 NAMES hdf5)
+-
+-SET(EXTRA_LIBS ${EXTRA_LIBS} iriclib ${CGNS_LIBRARY} ${HDF5_LIBRARIES})
+-
+ # link
+ target_link_libraries(unittests_cgnsfile ${EXTRA_LIBS})
+ 
