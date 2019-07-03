@@ -13,6 +13,7 @@ source:
     - unix-find-library.patch
     - macosx-rpath.patch
     - propagate-libraries.patch
+    - macos-clang.patch
 
 build:
   number: 3
