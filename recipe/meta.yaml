@@ -21,9 +21,10 @@ requirements:
   build:
     - cmake
     - {{ compiler('cxx') }}
-    - cgns=3.2.1
+  host:
+    - cgns==3.2.1=1
   run:
-    - cgns=3.2.1
+    - cgns==3.2.1=1
 
 about:
   home: http://i-ric.org
