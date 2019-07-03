@@ -1,0 +1,13 @@
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 6fac4a5..6ac3e7d 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -126,6 +126,8 @@ else()
+     else()
+       message(FATAL_ERROR "g++ version must be at least 4.7")
+     endif()
++  elseif(CMAKE_CXX_COMPILER_ID STREQUAL "Clang")
++    # do nothing
+   else()
+     target_compile_features(iriclib PRIVATE cxx_nullptr) # cmake >= 3.1 reqd
+   endif()

@@ -13,17 +13,19 @@ source:
     - unix-find-library.patch
     - macosx-rpath.patch
     - propagate-libraries.patch
+    - macos-clang.patch
 
 build:
-  number: 2
+  number: 3
 
 requirements:
   build:
-    - cmake=2.8
+    - cmake
     - {{ compiler('cxx') }}
-    - cgns=3.2.1
+  host:
+    - cgns==3.2.1=1
   run:
-    - cgns=3.2.1
+    - cgns==3.2.1=1
 
 about:
   home: http://i-ric.org
