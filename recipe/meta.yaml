@@ -15,11 +15,11 @@ source:
     - propagate-libraries.patch
 
 build:
-  number: 2
+  number: 3
 
 requirements:
   build:
-    - cmake=2.8
+    - cmake
     - {{ compiler('cxx') }}
     - cgns=3.2.1
   run:
