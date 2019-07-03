@@ -10,7 +10,5 @@ cmake .. \
     -DCMAKE_BUILD_TYPE=Release \
     -DHDF5_LIBRARY=$PREFIX/lib/libhdf5$SHLIB_EXT
 make
-if [[ `uname -s` == 'Linux' ]]; then
-    ctest
-fi
+ctest
 make install
