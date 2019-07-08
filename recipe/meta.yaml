@@ -1,5 +1,5 @@
 {% set name = "iriclib" %}
-{% set version = "3.0" %}
+{% set version = "0.1" %}
 
 package:
   name: {{ name }}
@@ -7,7 +7,7 @@ package:
 
 source:
   git_url: https://github.com/i-RIC/{{ name }}
-  git_rev: a6a110f117e9a6b1584289621426917a2cfdf487
+  git_rev: v{{ version }}
   patches:
     - filetype.patch
     - unix-find-library.patch
@@ -16,7 +16,7 @@ source:
     - macos-clang.patch
 
 build:
-  number: 3
+  number: 0
 
 requirements:
   build:
