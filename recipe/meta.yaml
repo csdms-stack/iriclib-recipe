@@ -16,16 +16,16 @@ source:
     - macos-clang.patch
 
 build:
-  number: 0
+  number: 1
 
 requirements:
   build:
     - cmake
     - {{ compiler('cxx') }}
   host:
-    - cgns==3.2.1=1
+    - cgns==3.2.1=2
   run:
-    - cgns==3.2.1=1
+    - cgns==3.2.1=2
 
 about:
   home: http://i-ric.org
